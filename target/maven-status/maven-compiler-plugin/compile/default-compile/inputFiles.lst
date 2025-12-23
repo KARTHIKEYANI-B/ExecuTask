@@ -1,0 +1,16 @@
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\dto\TaskRequest.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\model\User.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\service\UserService.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\TaskManagerApplication.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\repository\TaskRepository.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\model\Task.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\service\NotificationService.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\repository\UserRepository.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\controller\AuthController.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\service\TaskService.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\dto\RegisterRequest.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\dto\LoginRequest.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\controller\TaskController.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\config\CorsConfig.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\dto\ApiResponse.java
+C:\Users\sanja\OneDrive\Desktop\Eclipse-workspace\task-manager-backend\src\main\java\com\taskmanager\dto\UserResponse.java
