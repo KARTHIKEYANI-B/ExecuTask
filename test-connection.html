@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Test</title>
+</head>
+<body>
+    <h1>Backend Connection Test</h1>
+    <button onclick="testConnection()">Test Connection</button>
+    <div id="result"></div>
+
+    <script>
+        async function testConnection() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+            
+            try {
+                const response = await fetch('http://localhost:8080/api/auth/user/1');
+                const data = await response.json();
+                
+                if (response.status === 404 || response.status === 200) {
+                    resultDiv.innerHTML = '<h2 style="color: green;">✅ Backend is CONNECTED!</h2>';
+                } else {
+                    resultDiv.innerHTML = '<h2 style="color: red;">❌ Backend is NOT responding</h2>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '<h2 style="color: red;">❌ Backend is NOT running</h2><p>' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <select id="themeSelect" onchange="changeTheme()">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+    <option value="slate">Slate</option>
+    <option value="charcoal">Charcoal</option>
+    <option value="midnight">Midnight</option>
+</select>
+        <button onclick="logout()" class="btn-logout">Logout</button>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- User Info Section -->
+        <div class="user-section">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <h2>Welcome,</h2>
+                    <h1 id="userName">User</h1>
+                    <p id="userEmail">user@email.com</p>
+                    <p id="userPhone">+91 1234567890</p>
+                    <div class="pending-count">
+                        <span>Pending Tasks:</span>
+                        <strong id="pendingCount">0</strong>
+                    </div>
+                </div>
+                <button onclick="deleteAccount()" class="btn-delete-compact">
+                    🗑️ Delete Account
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="filterByCategory('all')" data-category="all">
+                📁 All Tasks
+            </button>
+            <button class="filter-btn" onclick="filterByCategory('daily_work')" data-category="daily_work">
+                📋 Daily Work
+            </button>
+            <button class="filter-btn" onclick="filterByCategory('exercise')" data-category="exercise">
+                💪 Exercise
+            </button>
+            <button class="filter-btn" onclick="filterByCategory('study')" data-category="study">
+                📚 Study
+            </button>
+            <button class="filter-btn" onclick="filterByCategory('shopping')" data-category="shopping">
+                🛒 Shopping
+            </button>
+        </div>
+
+        <!-- Task Creation Section -->
+        <div class="task-form-section">
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select id="taskCategory" required>
+                            <option value="daily_work" selected>📋 Daily Work</option>
+                            <option value="exercise">💪 Exercise</option>
+                            <option value="study">📚 Study</option>
+                            <option value="shopping">🛒 Shopping</option>
+                            <option value="other">📌 Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Task Title</label>
+                        <input type="text" id="taskTitle" required placeholder="Enter task title">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Task Description</label>
+                    <textarea id="taskDescription" rows="2" placeholder="Enter task details"></textarea>
+                </div>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" id="taskDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Time</label>
+                        <input type="time" id="taskTime" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Notification</label>
+                        <select id="notificationMethod">
+                            <option value="email">📧 Email</option>
+                            <option value="sms">📱 SMS</option>
+                            <option value="both">📧📱 Both</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Tasks Display Section -->
+        <div class="tasks-section">
+            <div class="tasks-header">
+                <h2>Your Tasks</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="changeView('card')" id="cardViewBtn">
+                        📋 Card View
+                    </button>
+                    <button class="view-btn" onclick="changeView('list')" id="listViewBtn">
+                        ☑️ List View
+                    </button>
+                </div>
+            </div>
+            <div id="tasksList" class="tasks-list card-view">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Detail Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Task Details</h2>
+            <div id="modalBody"></div>
+            <div class="modal-actions">
+                <button onclick="markComplete()" class="btn-success">Mark Complete</button>
+                <button onclick="editTask()" class="btn-warning">Edit</button>
+                <button onclick="deleteTask()" class="btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+   
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>
